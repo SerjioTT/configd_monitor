@@ -1,8 +1,8 @@
 ## Скрипт для мониторинга и перезапуска процесса configd
 
-* скрипт здесь /usr/local/bin/monitor_configd.sh
+* скрипт здесь /usr/local/bin/configd_monitor.sh
 сделать исполняемым 
-> sudo chmod +x /usr/local/bin/monitor_configd.sh
+> sudo chmod +x /usr/local/bin/configd_monitor.sh
 
 * логи здесь /var/log/configd_monitor.log
 
