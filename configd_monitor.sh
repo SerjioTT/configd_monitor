@@ -10,6 +10,7 @@ while true; do
     if [[ ! -z "$CPU_LOAD" ]] && (( $(echo "$CPU_LOAD >= $THRESHOLD" | bc -l) )); then
         echo "$(date): Остановка configd (CPU $CPU_LOAD%)" | sudo tee -a /var/log/configd_monitor.log
         sudo launchctl stop com.apple.configd
+        sudo renice +20 -p $(pgrep configd) 
     fi
 
     sleep 5  # Проверять каждые N секунд, при 1 не успевает процесс не успевает запуститься
