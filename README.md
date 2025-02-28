@@ -46,7 +46,9 @@ launchctl load ~/Library/LaunchAgents/com.user.configdmonitor.plist
 
 ```bash
 launchctl list | grep configd
+25951   0   com.user.configdmonitor
 ```
+0 - значит ошибок нет
 
 * Отключение при необходимости:
 
