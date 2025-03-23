@@ -40,12 +40,12 @@
 * Загружаем сервис:
 
 ```bash
-launchctl load ~/Library/LaunchAgents/com.user.configdmonitor.plist
+sudo launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.user.configdmonitor.plist
 ```
 * Проверяем, что он работает:
 
 ```bash
-launchctl list | grep configd
+launchctl list | grep configdmonitor
 25951   0   com.user.configdmonitor
 ```
 0 - значит ошибок нет
@@ -53,7 +53,6 @@ launchctl list | grep configd
 * Отключение при необходимости:
 
 ```bash
-sudo launchctl unload ~/Library/LaunchAgents/com.user.configdmonitor.plist
-
+sudo launchctl bootout gui/$(id -u) ~/Library/LaunchAgents/com.user.configdmonitor.plist
 ```
 
